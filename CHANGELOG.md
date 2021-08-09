@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/reputabl/reputabl-ui/compare/v1.0.0...v1.0.1) (2021-08-09)
+
+
+### Bug Fixes
+
+* init release ([d952f4e](https://github.com/reputabl/reputabl-ui/commit/d952f4e8933bdc57e4f1ffeaf2ff80ac8901b6a4))
+
 # 1.0.0 (2021-08-09)
 
 
