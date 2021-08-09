@@ -1,6 +1,6 @@
 {
     "name": "@reputabl/reputabl-ui",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "description": "reputabl react components",
     "main": "build/index.cjs.js",
     "module": "build/index.esm.js",
