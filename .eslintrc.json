@@ -10,7 +10,7 @@
         "node": true,
         "jest": true
     },
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "extends": ["eslint:recommended", "plugin:react/recommended"],
     "parserOptions": {
         "ecmaVersion": 6,
@@ -21,7 +21,8 @@
     },
     "plugins": ["react"],
     "rules": {
-        "semi": "error",
+        "semi": "off",
+        "no-undef": "off",
         "no-console": 0,
         "react/jsx-uses-vars": "error"
     },

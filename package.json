@@ -15,7 +15,7 @@
         "prettier": "npx prettier --write .",
         "clean-build": "rm -rf build",
         "build": "rollup -c",
-        "lint": "eslint \"**/*.js\"",
+        "lint": "eslint \"**/*.ts\" \"**/*.tsx\" ",
         "semantic-release": "npx semantic-release",
         "build-watch": "rollup -c -w",
         "storybook": "start-storybook -p 6006",
@@ -77,6 +77,8 @@
         "@types/react": "^17.0.16",
         "@types/react-dom": "^17.0.9",
         "@types/rollup-plugin-peer-deps-external": "^2.2.1",
+        "@typescript-eslint/eslint-plugin": "^4.29.0",
+        "@typescript-eslint/parser": "^4.29.0",
         "autoprefixer": "^9.8.0",
         "babel-eslint": "^10.1.0",
         "eslint": "^7.28.0",
@@ -88,6 +90,7 @@
         "prop-types": "^15.7.2",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
+        "react-number-format": "^4.7.3",
         "react-scripts": "4.0.3",
         "rollup": "^2.13.1",
         "rollup-plugin-cleaner": "^1.0.0",
@@ -100,7 +103,7 @@
         "rollup-plugin-serve": "^1.1.0",
         "rollup-plugin-typescript": "^1.0.1",
         "semantic-release": "^17.4.3",
-        "typescript": "^4.3.1"
+        "typescript": "^4.3.5"
     },
     "peerDependencies": {
         "@material-ui/core": "^4.11.4",
