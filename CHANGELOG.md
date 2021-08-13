@@ -1,3 +1,11 @@
+## [1.1.2](https://github.com/reputabl/reputabl-ui/compare/v1.1.1...v1.1.2) (2021-08-13)
+
+
+### Bug Fixes
+
+* deploy storyBook, ignore SB build files ([cee0f22](https://github.com/reputabl/reputabl-ui/commit/cee0f22f96a42dabd1b3c3be8d7bc23c289c79a3))
+* indentation, put prettier back in pre-commit ([c378433](https://github.com/reputabl/reputabl-ui/commit/c378433ffe77084ebdee9ded82eccc9ecd6f8c27))
+
 ## [1.1.1](https://github.com/reputabl/reputabl-ui/compare/v1.1.0...v1.1.1) (2021-08-13)
 
 
