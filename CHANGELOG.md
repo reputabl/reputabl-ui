@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/reputabl/reputabl-ui/compare/v1.1.0...v1.1.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* tile, deploy storybook ([5a499b3](https://github.com/reputabl/reputabl-ui/commit/5a499b3f47ef1c23953614dd2aaff4a5e968805e))
+
 # [1.1.0](https://github.com/reputabl/reputabl-ui/compare/v1.0.1...v1.1.0) (2021-08-09)
 
 
