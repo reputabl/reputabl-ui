@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Meta, Story } from "@storybook/react/types-6-0";
-import { NumberField, NumberProps } from "./index";
+import * as React from 'react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { NumberField, NumberProps } from './index';
 
 export default {
     title: 'Number Field',
@@ -18,6 +18,11 @@ Default.args = {};
 export const Phone = Template.bind({});
 Phone.args = {
     number: 'phone',
+};
+
+export const Zip = Template.bind({});
+Zip.args = {
+    number: 'zip',
 };
 
 export const Currency = Template.bind({});
