@@ -5,23 +5,26 @@ import { makeStyles } from '@material-ui/core/styles';
 // import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import { useRefDimensions, useWindowSize } from '../../utils';
-import {
-    Card,
-    CardActionArea,
-    CardContent,
-    CardMedia,
-    Typography,
-} from '@material-ui/core';
+import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
     root2: {
-        maxWidth: 345,
+        maxWidth: 110,
+        borderRadius: 15,
+        minWidth: 110,
+        backgroundColor: 'blue',
     },
     media: {
-        height: 100,
+        height: 80,
+        width: 80,
+        padding: 10,
+        borderRadius: 30,
+        justifyContent: 'center',
+        objectFit: 'contain',
+        margin: '0 auto',
     },
     paper: {
         padding: theme.spacing(1),
@@ -31,33 +34,44 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+// download image in database
+// redownload if image is 3months old
+// if it exists already use what's in database
+
 export const YuhField: FC = (): JSX.Element => {
     // const size = useWindowSize();
     const classes = useStyles();
 
     function FormCard() {
         return (
-            <React.Fragment>
-                <Card className={classes.root2}>
-                    <CardActionArea>
-                        <CardMedia
-                            className={classes.media}
-                            component={'img'}
-                            title="Contemplative Reptile"
-                            src={'https://logo.clearbit.com/uwm.edu'}
-                        />
-                        <CardContent style={{ padding: 5 }}>
-                            <Typography gutterBottom>Netflix</Typography>
-                        </CardContent>
-                    </CardActionArea>
-                </Card>
-            </React.Fragment>
+            <Card className={classes.root2}>
+                <CardActionArea href="https://youtube.com" target="_blank">
+                    <CardMedia
+                        className={classes.media}
+                        component={'img'}
+                        src={'https://logo.clearbit.com/pjmasks.com/'}
+                    />
+                    <CardContent
+                        style={{
+                            paddingLeft: 5,
+                            paddingRight: 5,
+                            paddingTop: 0,
+                            paddingBottom: 10,
+                        }}
+                    >
+                        <Typography align={'center'}>Amazon</Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
         );
     }
 
     function FormRow() {
         return (
             <React.Fragment>
+                <Grid item xs>
+                    <FormCard />
+                </Grid>
                 <Grid item xs>
                     <FormCard />
                 </Grid>

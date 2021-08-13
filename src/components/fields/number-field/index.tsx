@@ -1,8 +1,8 @@
-import * as React from "react";
-import { FC } from "react";
-import NumberFormat from "react-number-format";
-import TextField from "@material-ui/core/TextField";
-import { FieldProps } from "../utils";
+import * as React from 'react';
+import { FC } from 'react';
+import NumberFormat from 'react-number-format';
+import TextField from '@material-ui/core/TextField';
+import { FieldProps } from '../utils';
 
 export interface NumberProps extends FieldProps {
     number?: 'phone' | 'currency' | 'default' | undefined;

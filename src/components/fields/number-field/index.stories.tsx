@@ -1,6 +1,6 @@
-import * as React from "react";
-import { Meta, Story } from "@storybook/react/types-6-0";
-import { NumberField, NumberProps } from "./index";
+import * as React from 'react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { NumberField, NumberProps } from './index';
 
 export default {
     title: 'Number Field',
