@@ -1,6 +1,12 @@
 import * as React from 'react';
 import { FC } from 'react';
-import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@material-ui/core';
+import {
+    Card,
+    CardActionArea,
+    CardContent,
+    CardMedia,
+    Typography,
+} from '@material-ui/core';
 import { useStyles } from './styles';
 
 export interface TileProps {

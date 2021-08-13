@@ -20,6 +20,11 @@ Phone.args = {
     number: 'phone',
 };
 
+export const Zip = Template.bind({});
+Zip.args = {
+    number: 'zip',
+};
+
 export const Currency = Template.bind({});
 Currency.args = {
     number: 'currency',

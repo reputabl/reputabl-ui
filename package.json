@@ -19,6 +19,7 @@
         "semantic-release": "npx semantic-release",
         "build-watch": "rollup -c -w",
         "storybook": "start-storybook -p 6006",
+        "deploy-storybook": "storybook-to-ghpages",
         "build-storybook": "build-storybook",
         "prepare": "husky install"
     },

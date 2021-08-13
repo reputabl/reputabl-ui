@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { FieldProps } from '../utils';
 
 export interface NumberProps extends FieldProps {
-    number?: 'phone' | 'currency' | 'default' | undefined;
+    number?: 'phone' | 'currency' | 'default' | 'zip' | undefined;
 }
 
 export const NumberField: FC<NumberProps> = (
@@ -18,6 +18,15 @@ export const NumberField: FC<NumberProps> = (
                     format="+1 (###) ###-####"
                     allowEmptyFormatting
                     mask="_"
+                    customInput={TextField}
+                    {...props}
+                />
+            );
+        case 'zip':
+            return (
+                <NumberFormat
+                    format="#####"
+                    allowEmptyFormatting
                     customInput={TextField}
                     {...props}
                 />

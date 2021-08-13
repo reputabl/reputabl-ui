@@ -2,6 +2,7 @@ name: Node.js Package
 
 on:
     pull_request:
+        branches: [main]
     push:
         branches: [main]
 
@@ -28,7 +29,7 @@ jobs:
             - name: Run Test
               run: npm test
 
-    buildVersionReleasePublish:
+    buildStorybookVersionReleasePublish:
         name: Build, Version, Release, Publish
         needs: test
         runs-on: ubuntu-latest
@@ -52,6 +53,8 @@ jobs:
               run: npm run clean-build
             - name: Build Files & Folder
               run: npm run build --if-present
+            - name: Build Storybook
+              run: npm run deploy-storybook -- --ci
             - name: Semantic Release
               run: npx semantic-release
               env:
