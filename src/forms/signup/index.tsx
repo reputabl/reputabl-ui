@@ -3,16 +3,13 @@ import { useFormik } from 'formik';
 import Button from '@material-ui/core/Button';
 import { RTextField } from '../../components/fields/text-field';
 
-export interface LoginFormProps {
-    fieldMargin?: 'normal' | 'dense' | 'none' | undefined;
-}
+export interface SignUpFormProps {}
 
-export const LoginForm: FC<LoginFormProps> = (
-    props: LoginFormProps
-): JSX.Element => {
+export const SignUpForm: FC = (): JSX.Element => {
     const formik = useFormik({
         initialValues: {
             email: 'foobar@example.com',
+            username: 'foobar001',
             password: 'foobar',
         },
         onSubmit: (values) => {
@@ -28,7 +25,6 @@ export const LoginForm: FC<LoginFormProps> = (
                     id="email"
                     name="email"
                     label="Email"
-                    margin={props.fieldMargin}
                     value={formik.values.email}
                     onChange={formik.handleChange}
                     error={formik.touched.email && Boolean(formik.errors.email)}
@@ -36,11 +32,25 @@ export const LoginForm: FC<LoginFormProps> = (
                 />
                 <RTextField
                     fullWidth
+                    id="username"
+                    name="username"
+                    label="Username"
+                    value={formik.values.username}
+                    onChange={formik.handleChange}
+                    error={
+                        formik.touched.username &&
+                        Boolean(formik.errors.username)
+                    }
+                    helperText={
+                        formik.touched.username && formik.errors.username
+                    }
+                />
+                <RTextField
+                    fullWidth
                     id="password"
                     name="password"
                     label="Password"
                     type="password"
-                    margin={props.fieldMargin}
                     value={formik.values.password}
                     onChange={formik.handleChange}
                     error={

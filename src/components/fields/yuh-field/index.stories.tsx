@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { YuhField } from './index';
 
 export default {
-    title: 'Yuh Field',
+    title: 'Fields/Yuh Field',
     component: YuhField,
     description: `A field for text`,
 } as Meta;

@@ -1,6 +1,7 @@
 export interface FieldProps {
     children?: string;
     fullWidth?: boolean;
+    margin?: 'normal' | 'dense' | 'none' | undefined;
     name?: string;
     value?: any;
     id?: string;

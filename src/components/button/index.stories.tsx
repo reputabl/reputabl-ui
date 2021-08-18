@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Button, ButtonProps } from './index';
 
 export default {
-    title: 'Button',
+    title: 'Buttons/Button',
     component: Button,
     description: `A button.`,
     argTypes: {

@@ -5,9 +5,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import { StyleProps } from '../../components/cards/tile/styles';
 import { LoginForm } from '../../forms/login';
 
-// import { useStyles } from './styles';
-
-export interface LoginProps {}
+export interface LoginProps {
+    fieldMargin?: 'normal' | 'dense' | 'none' | undefined;
+}
 
 export const useStyles = makeStyles<Theme, StyleProps>(() => ({
     paper: {
@@ -32,12 +32,12 @@ export const useStyles = makeStyles<Theme, StyleProps>(() => ({
     },
 }));
 
-export const Login: FC = (): JSX.Element => {
+export const Login: FC<LoginProps> = (props: LoginProps): JSX.Element => {
     const classes = useStyles({});
 
     return (
         <Paper className={classes.paper}>
-            <LoginForm />
+            <LoginForm fieldMargin={props.fieldMargin} />
         </Paper>
     );
 };

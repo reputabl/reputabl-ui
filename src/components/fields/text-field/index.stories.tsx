@@ -4,7 +4,7 @@ import { RTextField } from './index';
 import { FieldProps } from '../utils';
 
 export default {
-    title: 'Text Field',
+    title: 'Fields/Text Field',
     component: RTextField,
     description: `A field for text`,
 } as Meta;
