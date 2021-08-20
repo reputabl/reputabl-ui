@@ -16,8 +16,9 @@
         "isolatedModules": true,
         "jsx": "react-jsx",
         "declaration": true,
-        "outDir": "./build/yuh"
+        "outDir": "./build/yuh",
+        "noEmit": true
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "./jest-setup.ts"],
     "exclude": ["node_modules", "build"]
 }

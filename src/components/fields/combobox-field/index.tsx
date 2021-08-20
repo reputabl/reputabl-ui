@@ -5,6 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import { FieldProps } from '../utils';
 import { getDayOptions, getYearOptions, months, option } from './utils';
 
+// be able to send your own options
 export interface ComboboxProps extends FieldProps {
     options?: 'day' | 'month' | 'year' | undefined;
 }
@@ -38,3 +39,5 @@ export const ComboBox: FC<ComboboxProps> = (
         />
     );
 };
+
+ComboBox.displayName = 'ComboBox';

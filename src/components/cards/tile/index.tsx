@@ -37,3 +37,5 @@ export const Tile: FC<TileProps> = (props: TileProps): JSX.Element => {
 Tile.defaultProps = {
     target: '_blank',
 };
+
+Tile.displayName = 'Tile';
