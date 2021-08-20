@@ -6,7 +6,7 @@ export interface StyleProps {
 }
 
 export const useStyles = makeStyles<Theme, StyleProps>((theme: Theme) => ({
-    card: (props) => ({
+    card: (props: StyleProps) => ({
         maxWidth: 110,
         borderRadius: 15,
         minWidth: 110,
