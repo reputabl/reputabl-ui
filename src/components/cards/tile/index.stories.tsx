@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Tile, TileProps } from './index';
 
 export default {
-    title: 'Tile',
+    title: 'Cards/Tile',
     component: Tile,
     description: `A field for text`,
 } as Meta;
