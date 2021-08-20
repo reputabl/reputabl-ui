@@ -1,18 +1,15 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { RTextField } from './index';
-import { FieldProps } from '../utils';
+import { Login, LoginProps } from './index';
 
 export default {
-    title: 'Fields/Text Field',
-    component: RTextField,
-    description: `A field for text`,
+    title: 'Sections/Login',
+    component: Login,
+    description: `Login`,
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<FieldProps> = (props: FieldProps) => (
-    <RTextField {...props} />
-);
+const Template: Story<LoginProps> = (props: LoginProps) => <Login {...props} />;
 
 //👇 Each story then reuses that template
 export const Default = Template.bind({});

@@ -5,12 +5,13 @@ export interface StyleProps {
     backgroundColor?: string;
 }
 
-export const useStyles = makeStyles<Theme, StyleProps>(() => ({
-    card: (props) => ({
+export const useStyles = makeStyles<Theme, StyleProps>((theme: Theme) => ({
+    card: (props: StyleProps) => ({
         maxWidth: 110,
         borderRadius: 15,
         minWidth: 110,
-        backgroundColor: props.backgroundColor,
+        backgroundColor: theme.palette.primary.main,
+        color: props.backgroundColor,
     }),
     cardContent: {
         paddingLeft: 5,
