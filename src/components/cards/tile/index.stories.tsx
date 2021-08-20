@@ -9,7 +9,7 @@ export default {
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<TileProps> = (props) => <Tile {...props} />;
+const Template: Story<TileProps> = (props: TileProps) => <Tile {...props} />;
 
 //👇 Each story then reuses that template
 export const Default = Template.bind({});
