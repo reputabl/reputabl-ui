@@ -1,5 +1,9 @@
 export interface FieldProps {
     children?: string;
+    fullWidth?: boolean;
+    margin?: 'normal' | 'dense' | 'none' | undefined;
+    name?: string;
+    value?: any;
     id?: string;
     label?: string;
     variant?: 'standard' | 'filled' | 'outlined' | undefined;
@@ -9,7 +13,8 @@ export interface FieldProps {
     defaultValue?: string;
     type?: 'tel' | 'text' | 'password' | undefined;
     autoComplete?: string;
-    helperText?: string;
+    onChange?: any;
+    helperText?: string | false | undefined;
     InputProps?: object;
     InputLabelProps?: object;
 }
