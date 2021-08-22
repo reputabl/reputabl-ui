@@ -1,8 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles';
-import { Theme } from '@material-ui/core';
+import {styled} from '@material-ui/core';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
-export const useStyles = makeStyles<Theme>(() => ({
-    eye: {
+export const _VisibilityIcon = styled(VisibilityIcon)(() => ({
         cursor: 'pointer',
-    },
+}));
+
+export const _VisibilityOffIcon = styled(VisibilityOffIcon)(() => ({
+        cursor: 'pointer',
 }));

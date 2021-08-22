@@ -1,13 +1,10 @@
 import * as React from 'react';
 import { FC } from 'react';
 import {
-    Card,
     CardActionArea,
-    CardContent,
-    CardMedia,
     Typography,
 } from '@material-ui/core';
-import { useStyles } from './styles';
+import { TileCard, TileCardMedia, TileCardContent } from './styles';
 
 export interface TileProps {
     href: any;
@@ -16,21 +13,18 @@ export interface TileProps {
 }
 
 export const Tile: FC<TileProps> = (props: TileProps): JSX.Element => {
-    const classes = useStyles({});
-
     return (
-        <Card className={classes.card}>
+        <TileCard>
             <CardActionArea href={`//${props.href}`} target={props.target}>
-                <CardMedia
-                    className={classes.logo}
+                <TileCardMedia
                     component={'img'}
                     src={`https://logo.clearbit.com/${props.href}`}
                 />
-                <CardContent className={classes.cardContent}>
+                <TileCardContent>
                     <Typography align={'center'}>{props.text}</Typography>
-                </CardContent>
+                </TileCardContent>
             </CardActionArea>
-        </Card>
+        </TileCard>
     );
 };
 
