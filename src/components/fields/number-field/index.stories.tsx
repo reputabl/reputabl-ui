@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { NumberField, NumberProps } from './index';
 
 export default {
-    title: 'Number Field',
+    title: 'Fields/Number Field',
     component: NumberField,
     description: `A field for different types of numbers`,
 } as Meta;
