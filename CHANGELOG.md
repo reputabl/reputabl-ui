@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/reputabl/reputabl-ui/compare/v1.1.2...v1.2.0) (2021-08-22)
+
+
+### Features
+
+* forms, sections, password field, tests, etc ([423ec35](https://github.com/reputabl/reputabl-ui/commit/423ec3512d952e79818f3d3cbcebc71af4011167))
+
 ## [1.1.2](https://github.com/reputabl/reputabl-ui/compare/v1.1.1...v1.1.2) (2021-08-13)
 
 
