@@ -1,42 +1,17 @@
 import * as React from 'react';
 import { FC } from 'react';
-import { Paper, Theme } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { StyleProps } from '../../components/cards/tile/styles';
 import { SignUpForm } from '../../forms/signup';
+import { _Paper } from '../styles';
 
-export interface SignUpProps {}
+export interface SignUpProps {
+    fieldMargin?: 'normal' | 'dense' | 'none' | undefined;
+}
 
-export const useStyles = makeStyles<Theme, StyleProps>(() => ({
-    paper: {
-        height: 600,
-        padding: 20,
-        width: 400,
-    },
-    cardContent: {
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingTop: 0,
-        paddingBottom: 10,
-    },
-    logo: {
-        height: 80,
-        width: 80,
-        padding: 10,
-        borderRadius: 30,
-        justifyContent: 'center',
-        objectFit: 'contain',
-        margin: '0 auto',
-    },
-}));
-
-export const SignUp: FC = (): JSX.Element => {
-    const classes = useStyles({});
-
+export const SignUp: FC<SignUpProps> = (props: SignUpProps): JSX.Element => {
     return (
-        <Paper className={classes.paper}>
-            <SignUpForm />
-        </Paper>
+        <_Paper>
+            <SignUpForm fieldMargin={props.fieldMargin} />
+        </_Paper>
     );
 };
 

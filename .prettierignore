@@ -1,5 +1,7 @@
 # Ignore artifacts:
 build
-coverage
 CHANGELOG.md
-storybook-static
+.storybook
+node_modules
+.github
+.idea
