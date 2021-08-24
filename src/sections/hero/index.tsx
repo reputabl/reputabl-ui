@@ -1,13 +1,14 @@
 import * as React from 'react';
+import { FC } from 'react';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Box from '@material-ui/core/Box';
-import {FC} from "react";
-import {Container, Stack, styled, useMediaQuery, useTheme} from "@material-ui/core";
-import {TitleTextButton} from "../../components/featured/title-text-button";
-import {theme} from '../../index';
+import {
+    Container,
+    Stack,
+    styled,
+    useMediaQuery,
+    useTheme,
+} from '@material-ui/core';
+import { TitleTextButton } from '../../components/featured/title-text-button';
 
 interface HeroProps {
     post: {
@@ -19,10 +20,11 @@ interface HeroProps {
     };
 }
 
-const HeroImage = styled("img")(() => ({
-    width: "100%",
-    objectFit: "cover",
-    overflow: "hidden",
+const HeroImage = styled('img')(() => ({
+    minHeight: '18rem',
+    width: '100%',
+    objectFit: 'cover',
+    overflow: 'hidden',
 }));
 
 // const HeroImage = styled("img")(() => ({
@@ -34,7 +36,7 @@ const HeroImage = styled("img")(() => ({
 
 export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
     const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSmall = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Paper
@@ -46,27 +48,31 @@ export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center',
-                maxHeight: 500
+                maxHeight: 500,
             }}
         >
-            <Container maxWidth={'lg'} disableGutters >
+            <Container maxWidth={'lg'} disableGutters>
                 <Stack
-                    direction={{ xs: 'column', sm: 'row' }}
+                    direction={{ xs: 'column', sm: 'column', md: 'row' }}
                     justifyContent="space-evenly"
                     alignItems="center"
-                    spacing={2}
+                    spacing={0}
                 >
-                    <TitleTextButton/>
+                    <TitleTextButton />
                     <HeroImage
                         src="https://source.unsplash.com/random"
                         alt=""
-                        style = { isSmall ? {maxHeight: 200} : {maxHeight: 500}}
+                        style={
+                            isSmall
+                                ? { maxHeight: '18rem' }
+                                : { maxHeight: 500 }
+                        }
                     />
                 </Stack>
             </Container>
         </Paper>
     );
-}
+};
 
 // <Paper
 //     sx={{

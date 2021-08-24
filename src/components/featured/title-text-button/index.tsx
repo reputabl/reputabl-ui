@@ -1,15 +1,15 @@
 import * as React from 'react';
-import {FC} from 'react';
-import {Stack, styled} from '@material-ui/core';
-import Paper from "@material-ui/core/Paper";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+import { FC } from 'react';
+import { Stack, styled } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 // export interface TitleTextButtonProps {}
 
-const TTBContainer = styled("div")(() => ({
+const TTBContainer = styled('div')(() => ({
+    minHeight: '15rem',
     paddingLeft: 32,
-    paddingRight: 32
+    paddingRight: 32,
 }));
 
 export const TitleTextButton: FC = (): JSX.Element => {
@@ -21,8 +21,13 @@ export const TitleTextButton: FC = (): JSX.Element => {
                 alignItems="flex-start"
                 spacing={2}
             >
-                <Typography variant={'h2'}> Data to enrich your ligma business </Typography>
-                <Typography variant={'body1'}>Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma </Typography>
+                <Typography variant={'h2'}>
+                    {' '}
+                    Data to enrich your ligma business{' '}
+                </Typography>
+                <Typography variant={'body1'}>
+                    Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma{' '}
+                </Typography>
                 <Button variant={'contained'}>Ligma Sugma</Button>
             </Stack>
         </TTBContainer>
