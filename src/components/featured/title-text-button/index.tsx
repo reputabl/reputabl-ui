@@ -12,13 +12,22 @@ const TTBContainer = styled('div')(() => ({
     paddingRight: 32,
 }));
 
+const StyledStack = styled(Stack)(({theme}) => ({
+    [theme.breakpoints.down('md')]: {
+        textAlign: "center",
+        alignItems: "center",
+    },
+    [theme.breakpoints.up('md')]: {
+        alignItems: "flex-start",
+    },
+}))
+
 export const TitleTextButton: FC = (): JSX.Element => {
     return (
         <TTBContainer>
-            <Stack
+            <StyledStack
                 direction="column"
                 justifyContent="center"
-                alignItems="flex-start"
                 spacing={2}
             >
                 <Typography variant={'h2'}>
@@ -29,7 +38,7 @@ export const TitleTextButton: FC = (): JSX.Element => {
                     Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma{' '}
                 </Typography>
                 <Button variant={'contained'}>Ligma Sugma</Button>
-            </Stack>
+            </StyledStack>
         </TTBContainer>
     );
 };
