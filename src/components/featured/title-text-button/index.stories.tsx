@@ -1,19 +1,19 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Login, LoginProps } from './index';
-import { theme } from '../../index';
+import { TitleTextButton } from './index';
+import { theme } from '../../../index';
 import { ThemeProvider } from '@material-ui/core';
 
 export default {
-    title: 'Sections/Login',
-    component: Login,
-    description: `Login`,
+    title: 'TitleTextButton',
+    component: TitleTextButton,
+    description: `A field for text`,
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<LoginProps> = (props) => (
+const Template: Story = () => (
     <ThemeProvider theme={theme}>
-        <Login {...props} />
+        <TitleTextButton />
     </ThemeProvider>
 );
 

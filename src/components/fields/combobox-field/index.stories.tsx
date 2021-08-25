@@ -1,19 +1,20 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Login, LoginProps } from './index';
-import { theme } from '../../index';
+import { ComboBox } from './index';
+import { NumberProps } from '../number-field';
+import { theme } from '../../../index';
 import { ThemeProvider } from '@material-ui/core';
 
 export default {
-    title: 'Sections/Login',
-    component: Login,
-    description: `Login`,
+    title: 'Fields/ComboBox Field',
+    component: ComboBox,
+    description: `A field for different types of numbers`,
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<LoginProps> = (props) => (
+const Template: Story<NumberProps> = (props) => (
     <ThemeProvider theme={theme}>
-        <Login {...props} />
+        <ComboBox {...props} />
     </ThemeProvider>
 );
 

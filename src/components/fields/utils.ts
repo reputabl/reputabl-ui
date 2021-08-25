@@ -18,3 +18,6 @@ export interface FieldProps {
     InputProps?: object;
     InputLabelProps?: object;
 }
+
+// hidden label
+// size

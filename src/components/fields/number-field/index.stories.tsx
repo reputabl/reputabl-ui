@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { NumberField, NumberProps } from './index';
+import { theme } from '../../../index';
+import { ThemeProvider } from '@material-ui/core';
 
 export default {
     title: 'Fields/Number Field',
@@ -9,7 +11,11 @@ export default {
 } as Meta;
 
 //👇 We create a “template” of how args map to rendering
-const Template: Story<NumberProps> = (props) => <NumberField {...props} />;
+const Template: Story<NumberProps> = (props) => (
+    <ThemeProvider theme={theme}>
+        <NumberField {...props} />
+    </ThemeProvider>
+);
 
 //👇 Each story then reuses that template
 export const Default = Template.bind({});

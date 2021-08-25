@@ -56,8 +56,10 @@
         "@babel/core": "^7.14.3",
         "@babel/preset-env": "^7.14.4",
         "@babel/preset-react": "^7.13.13",
-        "@material-ui/core": "^4.11.4",
-        "@material-ui/icons": "^4.11.2",
+        "@emotion/react": "^11.4.1",
+        "@emotion/styled": "^11.3.0",
+        "@material-ui/core": "^5.0.0-beta.4",
+        "@material-ui/icons": "^5.0.0-beta.4",
         "@rollup/plugin-babel": "^5.3.0",
         "@rollup/plugin-commonjs": "^12.0.0",
         "@rollup/plugin-node-resolve": "^8.0.0",
@@ -78,12 +80,13 @@
         "@testing-library/user-event": "^12.1.10",
         "@types/jest": "^26.0.24",
         "@types/node": "^16.4.13",
-        "@types/react": "^17.0.16",
-        "@types/react-dom": "^17.0.9",
+        "@types/react": "latest",
+        "@types/react-dom": "latest",
         "@types/rollup-plugin-peer-deps-external": "^2.2.1",
         "@typescript-eslint/eslint-plugin": "^4.29.0",
         "@typescript-eslint/parser": "^4.29.0",
         "babel-eslint": "^10.1.0",
+        "chokidar": "^3.5.2",
         "eslint": "^7.28.0",
         "eslint-plugin-react": "^7.24.0",
         "formik": "^2.2.9",
@@ -94,7 +97,7 @@
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-number-format": "^4.7.3",
-        "react-scripts": "4.0.3",
+        "react-scripts": "latest",
         "rollup": "^2.13.1",
         "rollup-plugin-cleaner": "^1.0.0",
         "rollup-plugin-commonjs": "^10.1.0",
@@ -110,9 +113,12 @@
         "typescript": "^4.3.5"
     },
     "peerDependencies": {
-        "@material-ui/core": "^4.11.4",
-        "@material-ui/icons": "^4.11.2",
+        "@material-ui/core": "^5.0.0-beta.4",
+        "@material-ui/icons": "^5.0.0-beta.4",
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
+    },
+    "optionalDependencies": {
+        "fsevents": "^2.3.2"
     }
 }
