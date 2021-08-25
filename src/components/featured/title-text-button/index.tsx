@@ -7,9 +7,8 @@ import Button from '@material-ui/core/Button';
 // export interface TitleTextButtonProps {}
 
 const TTBContainer = styled('div')(() => ({
-    minHeight: '15rem',
-    paddingLeft: 32,
-    paddingRight: 32,
+    margin: 'auto',
+    padding: 20
 }));
 
 const StyledStack = styled(Stack)(({theme}) => ({
@@ -31,11 +30,10 @@ export const TitleTextButton: FC = (): JSX.Element => {
                 spacing={2}
             >
                 <Typography variant={'h2'}>
-                    {' '}
-                    Data to enrich your ligma business{' '}
+                    Data to enrich your ligma business
                 </Typography>
                 <Typography variant={'body1'}>
-                    Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma{' '}
+                    Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma Sugma
                 </Typography>
                 <Button variant={'contained'}>Ligma Sugma</Button>
             </StyledStack>
