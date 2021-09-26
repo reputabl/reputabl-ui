@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FC, useState } from 'react';
-import TextField from '@material-ui/core/TextField';
+import TextField from '@mui/material/TextField';
 import { FieldProps } from '../utils';
 import { InputAdornment } from '@material-ui/core';
 import { _VisibilityIcon, _VisibilityOffIcon } from './styles';

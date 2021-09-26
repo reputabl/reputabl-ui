@@ -1,6 +1,6 @@
 import * as React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Grid from '@material-ui/core/Grid';
+import AppBar from '@mui/material/AppBar';
+import Grid from '@mui/material/Grid';
 import { styled } from '@material-ui/core';
 
 export interface NavBarProps {
