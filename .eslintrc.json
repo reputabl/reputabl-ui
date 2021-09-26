@@ -24,7 +24,8 @@
         "semi": "off",
         "no-undef": "off",
         "no-console": 0,
-        "react/jsx-uses-vars": "error"
+        "react/jsx-uses-vars": "error",
+        "react/prop-types": 0
     },
     "globals": {
         "describe": true,

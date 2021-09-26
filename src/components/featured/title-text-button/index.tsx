@@ -29,11 +29,13 @@ const StyledStack = styled(Stack)(({ theme }) => ({
     },
 }));
 
+// style={{width: 45}}
+
 const getButtons = (buttons: TTBButton[]) => {
     let moreButtons: JSX.Element[] = [];
 
     buttons.forEach((value) => {
-        moreButtons.push(<Button variant={'contained'}>{value.text}</Button>);
+        moreButtons.push(<Button variant={'contained'} style={{width: '8rem'}}>{value.text}</Button>);
     });
 
     return moreButtons;
@@ -47,7 +49,7 @@ export const TitleTextButton: FC<TitleTextButtonProps> = (
             <StyledStack direction="column" justifyContent="center" spacing={2}>
                 <Typography variant={'h2'}>{props.heading}</Typography>
                 <Typography variant={'body1'}>{props.subtext}</Typography>
-                <Stack spacing={2} direction={'row'} style={{ width: 200 }}>
+                <Stack spacing={2} direction={'row'}>
                     {getButtons(props.buttons)}
                 </Stack>
             </StyledStack>

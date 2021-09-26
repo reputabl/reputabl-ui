@@ -13,36 +13,16 @@ import {
     TTBButton,
 } from '../../components/featured/title-text-button';
 
-// direction={
-//     props.isImageRight
-//         ? { sm: 'column', md: 'row' }
-//         : { sm: 'column', md: 'row-reverse' }
-// }
-
-interface HeroProps {
+export interface HeroProps {
     imageType?: 'picture' | 'logo' | 'none' | undefined;
-    imageOrientation?: 'right' | 'left' | 'background' | undefined;
+    imageOrientation?: 'right' | 'left' | 'background';
+    backgroundColor?: string;
+    topBottomPadding?: string;
     heading: string;
     subtext: string;
     buttons: TTBButton[];
     src: string;
 }
-
-const HeroImage = styled('img')(() => ({
-    minHeight: '18rem',
-    maxHeight: 500,
-    width: '100%',
-    objectFit: 'cover',
-    overflow: 'hidden',
-}));
-
-// const HeroImageTwo = styled('img')(() => ({
-//     minHeight: '18rem',
-//     maxHeight: 500,
-//     maxWidth: '40%',
-//     objectFit: 'contain',
-//     display: 'flex',
-// }));
 
 const HeroImageTwo = styled('img')(() => ({
     maxHeight: 200,
@@ -64,15 +44,6 @@ const StyledDiv2 = styled('div')(() => ({
     justifyContent: 'center',
 }));
 
-const Item = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    padding: theme.spacing(1),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-}));
-
-//                 backgroundImage: `url(${post.image})`,
-
 export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
     const theme = useTheme();
     const isMdUp = useMediaQuery(theme.breakpoints.up('md'));
@@ -85,33 +56,41 @@ export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
         }[type];
     };
 
-    const getImageOrientation = (type: string) => {
-        return {
-            right: 'Coke',
-            left: 'Pepsi',
-            background: 'Lemonade',
-        }[type];
+    const getImageOrientation = (
+        type: 'right' | 'left' | 'background' | undefined
+    ) => {
+        switch (type) {
+            case 'right':
+                return 'row-reverse';
+            case 'left':
+                return 'row';
+            case 'background':
+                return 'row';
+            case undefined:
+            default:
+                return 'row';
+        }
     };
 
     return (
         <div
             style={{
-                backgroundColor: 'lightsteelblue',
+                backgroundColor: props.backgroundColor,
             }}
         >
             <Container
                 maxWidth={'md'}
                 disableGutters
                 style={{
-                    backgroundColor: 'lightsteelblue',
-                    paddingTop: 40,
-                    paddingBottom: 40,
+                    backgroundColor: props.backgroundColor,
+                    paddingTop: props.topBottomPadding,
+                    paddingBottom: props.topBottomPadding,
                 }}
             >
                 <Grid
                     container
                     spacing={2}
-                    direction="row"
+                    direction={getImageOrientation(props.imageOrientation)}
                     justifyContent="space-evenly"
                     alignItems="center"
                 >
@@ -130,25 +109,6 @@ export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
                         </StyledDiv>
                     </Grid>
                 </Grid>
-                {/*<Stack*/}
-                {/*    direction={{ xs: 'column', sm: 'row-reverse' }}*/}
-                {/*    justifyContent="center"*/}
-                {/*    alignItems="center"*/}
-                {/*    spacing={3}*/}
-                {/*>*/}
-                {/*    <StyledDiv>*/}
-                {/*        <TitleTextButton*/}
-                {/*            buttons={props.buttons}*/}
-                {/*            heading={props.heading}*/}
-                {/*            subtext={props.subtext}*/}
-                {/*        />*/}
-                {/*    </StyledDiv>*/}
-                {/*    {isMdUp && (*/}
-                {/*        // <StyledDiv>*/}
-                {/*        <HeroImageTwo src={props.src} alt="" />*/}
-                {/*        // </StyledDiv>*/}
-                {/*    )}*/}
-                {/*</Stack>*/}
             </Container>
         </div>
     );
@@ -157,8 +117,3 @@ export const Hero: FC<HeroProps> = (props: HeroProps): JSX.Element => {
 // Hero.defaultProps = {
 //     imageRight: true,
 // };
-
-// what is image?
-// what side?
-// if logo -> do something
-// if picture -> do something else
