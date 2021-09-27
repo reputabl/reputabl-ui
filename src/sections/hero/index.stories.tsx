@@ -47,7 +47,8 @@ Default.args = {
   backgroundColor: 'red',
   topBottomPadding: '4rem',
   imageOrientation: "left",
-  src: 'https://techcrunch.com/wp-content/uploads/2018/07/logo-2.png?w=300'
+  src: 'https://source.unsplash.com/random'
+  // src: 'https://techcrunch.com/wp-content/uploads/2018/07/logo-2.png?w=300'
 };
 
 // src={'https://source.unsplash.com/random'}

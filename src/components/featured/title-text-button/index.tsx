@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 export interface TitleTextButtonProps {
     heading: string;
     subtext: string;
+    fontColor?: string;
     buttons: TTBButton[];
 }
 
@@ -47,8 +48,8 @@ export const TitleTextButton: FC<TitleTextButtonProps> = (
     return (
         <TTBContainer>
             <StyledStack direction="column" justifyContent="center" spacing={2}>
-                <Typography variant={'h2'}>{props.heading}</Typography>
-                <Typography variant={'body1'}>{props.subtext}</Typography>
+                <Typography variant={'h3'} style={{color: props.fontColor}}>{props.heading}</Typography>
+                <Typography variant={'body1'} style={{color: props.fontColor}}>{props.subtext}</Typography>
                 <Stack spacing={2} direction={'row'}>
                     {getButtons(props.buttons)}
                 </Stack>
